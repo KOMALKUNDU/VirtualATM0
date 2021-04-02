@@ -6,10 +6,18 @@ import android.os.Bundle;
 
 public class LogiActivity extends AppCompatActivity {
 
+    EditText email, password;
+    Button signIn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logi);
+        
+        email = findViewById(R.id.emailPhone);
+        password = findViewById(R.id.passWord);
+
+        signIn = findViewById(R.id.SignUp);
     }
     
 
