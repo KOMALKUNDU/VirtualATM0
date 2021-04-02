@@ -18,6 +18,26 @@ public class LogiActivity extends AppCompatActivity {
         password = findViewById(R.id.passWord);
 
         signIn = findViewById(R.id.SignUp);
+        
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                email.setError(null);
+                password.setError(null);
+
+                if (email.getText().toString().isEmpty()) {
+                    email.setError("Field can't be empty");
+                    return;
+                }
+                if (password.getText().toString().isEmpty()) {
+                    password.setError("Field can't be empty");
+                    return;
+                }
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+            }
+        });
+
     }
     
 
