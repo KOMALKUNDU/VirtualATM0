@@ -11,4 +11,13 @@ public class LogiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logi);
     }
+    
+
+    public void register (View view) {
+        startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+    }
+
+    public void skip (View view) {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+    }
 }
